@@ -3,7 +3,7 @@ provider "google" {
   region  = "asia-northeast1"
   zone    = "asia-northeast1-a"
 }
-##--------------------------------------------(vpc)--------------------------------------------
+#--------------------------------------------(vpc)--------------------------------------------
 module "vpc" {
   source                                    = "git::git@github.com:opsstation/terraform-gcp-vpc.git?ref=v1.0.0"
   name                                      = "dev"
@@ -16,7 +16,7 @@ module "vpc" {
   delete_default_routes_on_create           = false
 }
 
-##--------------------------------------------(firewall)--------------------------------------------
+#--------------------------------------------(firewall)--------------------------------------------
 module "firewall" {
   source        = "./../"
   name          = "dev"

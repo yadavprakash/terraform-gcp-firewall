@@ -4,6 +4,7 @@ variable "environment" {
   description = "Environment (e.g. `prod`, `dev`, `staging`)."
 }
 
+
 variable "label_order" {
   type        = list(any)
   default     = ["name", "environment"]
